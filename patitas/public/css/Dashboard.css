@@ -1,0 +1,216 @@
+  :root {
+    --primary: #4b7bec;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --pink: #ff6b8b;
+    --teal: #20c997;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+  }
+
+  .dashboard-header {
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid var(--primary);
+  }
+
+  .stat-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  .stat-card-1 {
+    background: linear-gradient(135deg, var(--primary), #6a8eec);
+  }
+  .stat-card-2 {
+    background: linear-gradient(135deg, var(--pink), #ff8ba3);
+  }
+  .stat-card-3 {
+    background: linear-gradient(135deg, var(--teal), #3bd5a9);
+  }
+  .stat-card-4 {
+    background: linear-gradient(135deg, var(--warning), #ffd54f);
+  }
+  .stat-card-5 {
+    background: linear-gradient(135deg, var(--info), #5bc0de);
+  }
+  .stat-card-6 {
+    background: linear-gradient(135deg, var(--danger), #e35d6a);
+  }
+
+  .stat-card-icon {
+    font-size: 2.5rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .card-admin {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+  }
+
+  .card-admin:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-admin .card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    border-radius: 12px 12px 0 0 !important;
+  }
+
+  .title-section {
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .title-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--pink));
+    border-radius: 3px;
+  }
+
+  .badge-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+
+  .badge-available {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+  }
+  .badge-adopted {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+  }
+  .badge-pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning);
+  }
+  .badge-approved {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: var(--info);
+  }
+
+  .nav-tabs .nav-link {
+    border: none;
+    color: var(--secondary);
+    font-weight: 500;
+    padding: 10px 20px;
+  }
+
+  .nav-tabs .nav-link.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    background: transparent;
+  }
+
+  .table-admin {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .table-admin thead th {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+  }
+
+  .table-admin tbody tr:hover {
+    background-color: rgba(75, 123, 236, 0.05);
+  }
+
+  .animal-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-sidebar {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    height: 100%;
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 10px 15px;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+  }
+
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    background-color: rgba(75, 123, 236, 0.1);
+    color: var(--primary);
+  }
+
+  .sidebar-link i {
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+  }
